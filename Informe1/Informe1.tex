@@ -1,0 +1,203 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Informe1},
+  pdfauthor={Sofia},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Informe1}
+\author{Sofia}
+\date{2025-02-23}
+
+\begin{document}
+\maketitle
+
+\subsection{Planteamiento del
+Problema}\label{planteamiento-del-problema}
+
+Desde su creación, la franquicia Pokémon ha presentado una gran
+diversidad de especies, cada una con atributos y características únicas.
+Con más de 1000 Pokémon a la fecha, resulta complejo determinar
+objetivamente cuáles sobresalen en cada generación. Los rankings
+existentes a menudo incorporan sesgos subjetivos, como la popularidad o
+el diseño de los Pokémon. Esta investigación busca superar estas
+limitaciones mediante el uso de análisis estadísticos descriptivos para
+identificar y clasificar a los Pokémon más destacados de cada
+generación, basándose en sus pricipales estadísticas base.
+
+\subsection{Justificación de la
+Investigación}\label{justificaciuxf3n-de-la-investigaciuxf3n}
+
+Este proyecto proporcionará a la comunidad de jugadores y entusiastas
+una evaluación objetiva y basada en datos sobre los Pokémon más
+sobresalientes de cada generación. El análisis estadístico permitirá
+identificar patrones y tendencias de los mejores Pokémon en cada
+generación, así como comprender mejor algunas las mecánicas internas del
+juego, los resultados podrán ser utilizados para optimizar equipos y
+estrategias de juego. Además, este proyecto servirá como una herramienta
+educativa para demostrar la aplicación de técnicas de las estadísticas
+descriptivas en un contexto más amigable y divertido para la persona
+promedio.
+
+\subsection{Límites y Alcances}\label{luxedmites-y-alcances}
+
+El análisis se limitará a las estadísticas base de los Pokémon,
+incluyendo HP (puntos de salud), ataque, defensa, ataque especial,
+defensa especial y velocidad. Se utilizarán técnicas de estadística
+descriptiva para analizar y comparar los datos. El estudio abarcará
+todas las nueve generaciones de Pokémon presentes en la base de datos
+proporcionada. No se considerarán factores externos como habilidades,
+movimientos, estrategias de combate o tiers competitivos.
+
+\subsection{Marco Teórico}\label{marco-teuxf3rico}
+
+El proyecto se fundamentará en los conceptos de estadística descriptiva,
+incluyendo medidas de tendencia central, dispersión y tipificando los
+datos. Se utilizarán herramientas de programación como R para el
+análisis y visualización de los datos. Al final de cada top se tomarán
+en cuenta los tipos de Pokémon y sus habilidades más importantes a la
+hora de competir contra un líder de gimnasio.
+
+\subsection{Definición de las
+Variables:}\label{definiciuxf3n-de-las-variables}
+
+\begin{itemize}
+\tightlist
+\item
+  id: Identificador único del Pokémon.
+\item
+  name: Nombre del Pokémon.
+\item
+  generation: Generación a la que pertenece el Pokémon.
+\item
+  evolves\_from: Pokémon del que evoluciona, si aplica.
+\item
+  type1: Tipo primario del Pokémon.
+\item
+  type2: Tipo secundario del Pokémon, si aplica.
+\item
+  hp: Puntos de salud base del Pokémon.
+\item
+  atk: Ataque base del Pokémon.
+\item
+  def: Defensa base del Pokémon.
+\item
+  spatk: Ataque especial base del Pokémon.
+\item
+  spdef: Defensa especial base del Pokémon.
+\item
+  speed: Velocidad base del Pokémon.
+\item
+  total: Suma de todas las estadísticas base del Pokémon (HP, ataque,
+  defensa, ataque especial, defensa especial y velocidad). Esta variable
+  será fundamental para el ranking.
+\item
+  height: Altura del Pokémon.
+\item
+  weight: Peso del Pokémon.
+\item
+  abilities: Habilidades del Pokémon.
+\item
+  desc: Descripción del Pokémon.
+\end{itemize}
+
+\subsection{Objetivos}\label{objetivos}
+
+\subsubsection{General}\label{general}
+
+Desarrollar un informe dinámico en RMarkdown que, mediante análisis
+estadísticos, determine el top 5 de los Pokémon más destacados por
+generación, utilizando una base de datos con información de las nueve
+generaciones y sus principales estadísticas.
+
+\subsubsection{Específicos}\label{especuxedficos}
+
+\begin{itemize}
+\tightlist
+\item
+  Dividir la base de datos en subconjuntos en base a cada generación de
+  Pokémon.
+\item
+  Realizar un análisis descriptivo de las estadísticas de manera general
+  para todos los pokemones.
+\item
+  Realizar la tipificación de los datos de las estadísticas de manera
+  general general para todos los pokemones.
+\item
+  Ordenar los Pokémon de cada generación tomando en cuenta los datos
+  tipificados de mayor a menor.
+\item
+  Seleccionar los 5 mejores Pokémon de cada generación, basándonos en
+  los datos tipificados, para formar el ranking.
+\item
+  Mencionar la efectividad de los pokemons contra los lideres de
+  gimnacio (opcional)
+\item
+  Visualizar los resultados en tablas y gráficos generados en RMarkdown,
+  que permitan la comparación entre generaciones y la identificación de
+  los Pokémon más destacados.
+\item
+  Desarrollar un dashboard interactivo que resuma gráficamente la
+  información más relevante del estudio.
+\end{itemize}
+
+\end{document}

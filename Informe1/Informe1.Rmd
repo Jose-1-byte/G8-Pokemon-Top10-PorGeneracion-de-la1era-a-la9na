@@ -1,0 +1,66 @@
+---
+title: "Informe1"
+author: "Sofia"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Planteamiento del Problema
+
+Desde su creación, la franquicia Pokémon ha presentado una gran diversidad de especies, cada una con atributos y características únicas. Con más de 1000 Pokémon a la fecha, resulta complejo determinar objetivamente cuáles sobresalen en cada generación. Los rankings existentes a menudo incorporan sesgos subjetivos, como la popularidad o el diseño de los Pokémon. Esta investigación busca superar estas limitaciones mediante el uso de análisis estadísticos descriptivos para identificar y clasificar a los Pokémon más destacados de cada generación, basándose en sus pricipales estadísticas base.
+
+## Justificación de la Investigación
+
+Este proyecto proporcionará a la comunidad de jugadores y entusiastas una evaluación objetiva y basada en datos sobre los Pokémon más sobresalientes de cada generación. El análisis estadístico permitirá identificar patrones y tendencias de los mejores Pokémon en cada generación, así como comprender mejor algunas las mecánicas internas del juego, los resultados podrán ser utilizados para optimizar equipos y estrategias de juego. Además, este proyecto servirá como una herramienta educativa para demostrar la aplicación de técnicas de las estadísticas descriptivas en un contexto más amigable y divertido para la persona promedio.
+
+## Límites y Alcances
+
+El análisis se limitará a las estadísticas base de los Pokémon, incluyendo HP (puntos de salud), ataque, defensa, ataque especial, defensa especial y velocidad. Se utilizarán técnicas de estadística descriptiva para analizar y comparar los datos. El estudio abarcará todas las nueve generaciones de Pokémon presentes en la base de datos proporcionada. No se considerarán factores externos como habilidades, movimientos, estrategias de combate o tiers competitivos.
+
+## Marco Teórico
+
+El proyecto se fundamentará en los conceptos de estadística descriptiva, incluyendo medidas de tendencia central, dispersión y tipificando los datos. Se utilizarán herramientas de programación como R para el análisis y visualización de los datos. Al final de cada top se tomarán en cuenta los tipos de Pokémon y sus habilidades más importantes a la hora de competir contra un líder de gimnasio.
+
+## Definición de las Variables:
+
+- id: Identificador único del Pokémon.
+- name: Nombre del Pokémon.
+- generation: Generación a la que pertenece el Pokémon.
+- evolves_from: Pokémon del que evoluciona, si aplica.
+- type1: Tipo primario del Pokémon.
+- type2: Tipo secundario del Pokémon, si aplica.
+- hp: Puntos de salud base del Pokémon.
+- atk: Ataque base del Pokémon.
+- def: Defensa base del Pokémon.
+- spatk: Ataque especial base del Pokémon.
+- spdef: Defensa especial base del Pokémon.
+- speed: Velocidad base del Pokémon.
+- total: Suma de todas las estadísticas base del Pokémon (HP, ataque, defensa, ataque especial, defensa especial y velocidad). Esta variable será fundamental para el ranking.
+- height: Altura del Pokémon.
+- weight: Peso del Pokémon.
+- abilities: Habilidades del Pokémon.
+- desc: Descripción del Pokémon.
+
+## Objetivos
+
+### General
+
+Desarrollar un informe dinámico en RMarkdown que, mediante análisis estadísticos, determine el top 5 de los Pokémon más destacados por generación, utilizando una base de datos con información de las nueve generaciones y sus principales estadísticas.
+
+### Específicos
+
+- Dividir la base de datos en subconjuntos en base a cada generación de Pokémon.
+- Realizar un análisis descriptivo de las estadísticas de manera general para todos los pokemones.
+- Realizar la tipificación de los datos de las estadísticas de manera general general para todos los pokemones.
+- Ordenar los Pokémon de cada generación tomando en cuenta los datos tipificados de mayor a menor.
+- Seleccionar los 5 mejores Pokémon de cada generación, basándonos en los datos tipificados, para formar el ranking.
+- Mencionar la efectividad de los pokemons contra los lideres de gimnacio (opcional)
+- Visualizar los resultados en tablas y gráficos generados en RMarkdown, que permitan la comparación entre generaciones y la identificación de los Pokémon más destacados.
+- Desarrollar un dashboard interactivo que resuma gráficamente la información más relevante del estudio.
+
+
+
