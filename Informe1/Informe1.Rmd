@@ -1,6 +1,6 @@
 ---
 title: "Informe1"
-author: "Sofia"
+author: "Sofia Rodriguez y Jose Aguirre"
 date: "`r Sys.Date()`"
 output: pdf_document
 ---
