@@ -1,6 +1,6 @@
 ---
-title: "Informe1"
-author: "Sofia"
+title: "Análisis Estadístico y Ranking de los Pokémon Más Destacados por Generación"
+author: "Sofia Rodriguez y Jose Aguirre"
 date: "`r Sys.Date()`"
 output: pdf_document
 ---
@@ -25,7 +25,7 @@ El análisis se limitará a las estadísticas base de los Pokémon, incluyendo H
 
 El proyecto se fundamentará en los conceptos de estadística descriptiva, incluyendo medidas de tendencia central, dispersión y tipificando los datos. Se utilizarán herramientas de programación como R para el análisis y visualización de los datos. Al final de cada top se tomarán en cuenta los tipos de Pokémon y sus habilidades más importantes a la hora de competir contra un líder de gimnasio.
 
-## Definición de las Variables:
+## Explicación de las Variables:
 
 - id: Identificador único del Pokémon.
 - name: Nombre del Pokémon.
@@ -39,7 +39,7 @@ El proyecto se fundamentará en los conceptos de estadística descriptiva, inclu
 - spatk: Ataque especial base del Pokémon.
 - spdef: Defensa especial base del Pokémon.
 - speed: Velocidad base del Pokémon.
-- total: Suma de todas las estadísticas base del Pokémon (HP, ataque, defensa, ataque especial, defensa especial y velocidad). Esta variable será fundamental para el ranking.
+- total: Suma de todas las estadísticas base del Pokémon (HP, ataque, defensa, ataque especial, defensa especial y   velocidad). Esta variable será fundamental para el ranking.
 - height: Altura del Pokémon.
 - weight: Peso del Pokémon.
 - abilities: Habilidades del Pokémon.
@@ -51,7 +51,7 @@ El proyecto se fundamentará en los conceptos de estadística descriptiva, inclu
 
 Desarrollar un informe dinámico en RMarkdown que, mediante análisis estadísticos, determine el top 5 de los Pokémon más destacados por generación, utilizando una base de datos con información de las nueve generaciones y sus principales estadísticas.
 
-### Específicos
+### Específicos:
 
 - Dividir la base de datos en subconjuntos en base a cada generación de Pokémon.
 - Realizar un análisis descriptivo de las estadísticas de manera general para todos los pokemones.
