@@ -60,14 +60,14 @@
 \urlstyle{same}
 \hypersetup{
   pdftitle={Análisis Estadístico y Ranking de los Pokémon Más Destacados por Generación},
-  pdfauthor={Sofia Rodriguez y Jose Aguirre},
+  pdfauthor={Sofia Rodriguez,Jose Aguirre y Carmen De Bolivar},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
 \title{Análisis Estadístico y Ranking de los Pokémon Más Destacados por
 Generación}
-\author{Sofia Rodriguez y Jose Aguirre}
-\date{2025-02-23}
+\author{Sofia Rodriguez,Jose Aguirre y Carmen De Bolivar}
+\date{2025-02-27}
 
 \begin{document}
 \maketitle
@@ -200,5 +200,178 @@ generaciones y sus principales estadísticas.
   Desarrollar un dashboard interactivo que resuma gráficamente la
   información más relevante del estudio.
 \end{itemize}
+
+\section{Contexto General del Tema}\label{contexto-general-del-tema}
+
+Desde el lanzamiento de la primera generación de Pokémon en 1996,
+evaluar objetivamente el desempeño de estas criaturas ha sido un desafío
+constante. Inicialmente, los jugadores comparaban las especies
+utilizando criterios cualitativos como el diseño o la rareza, o mediante
+métricas no estandarizadas como el Total de Estadísticas Base (BST, por
+sus siglas en inglés), que es la suma de las seis estadísticas
+fundamentales: Puntos de Salud (HP), Ataque, Defensa, Ataque Especial,
+Defensa Especial y Velocidad. Sin embargo, este enfoque presenta dos
+problemas críticos:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Escalada de Poder (Power Creep)}: Las generaciones más
+  recientes introducen Pokémon con BST significativamente más altos. Por
+  ejemplo, el BST promedio de la Generación I es 420, mientras que en la
+  Generación IX supera los 480. Esta diferencia crea una brecha
+  artificial entre especies antiguas y nuevas, dificultando las
+  comparaciones directas sin ajustar por variaciones generacionales
+  (Bulbapedia, 2023).
+\item
+  \textbf{Heterogeneidad de Tipos}: La distribución de tipos de Pokémon
+  no es uniforme a lo largo de las generaciones. Algunos tipos, como
+  Agua o Volador, son más comunes, mientras que otros, como Dragón, son
+  menos frecuentes. Esta disparidad puede distorsionar los rankings no
+  ajustados, ya que la abundancia o escasez de ciertos tipos influye en
+  el desempeño relativo y en las estrategias disponibles para los
+  jugadores (Pokémon Database, 2023).
+\end{itemize}
+
+Este estudio se enmarca en el ámbito de la estadística descriptiva
+estandarizada, un enfoque que permite neutralizar sesgos sistémicos al
+comparar Pokémon de diferentes generaciones. La relevancia de este
+enfoque radica en ofrecer un método replicable y transparente para
+establecer rankings intergeneracionales basados exclusivamente en
+métricas objetivas.
+
+\section{Revisión de Investigaciones
+Previas}\label{revisiuxf3n-de-investigaciones-previas}
+
+\subsection{a) Métodos Cuantitativos Sin
+Estandarización}\label{a-muxe9todos-cuantitativos-sin-estandarizaciuxf3n}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Listas Basadas en BST Crudo}: Sitios especializados como
+  Serebii.net (2001 - actualidad) han publicado rankings según el BST
+  sin considerar ajustes estadísticos. Este enfoque destaca Pokémon como
+  Slaking (Generación III, BST 670), sin tener en cuenta limitaciones
+  específicas que afectan su rendimiento real en combate, como su
+  habilidad Truant (Serebii.net, 2023).
+\item
+  \textbf{Documentación de Estadísticas por Generación}: Bulbapedia
+  (2005 - actualidad) ha recopilado y presentado las estadísticas base
+  de los Pokémon por generación. Sin embargo, estas compilaciones no
+  realizan ajustes por diferencias en las medias o desviaciones estándar
+  entre generaciones, lo que dificulta comparaciones precisas y justas
+  entre Pokémon de distintas épocas (Bulbapedia, 2023).
+\end{itemize}
+
+\subsection{Brechas Identificadas}\label{brechas-identificadas}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Falta de Normalización Estadística}: Comparar un BST de 500 en
+  la Generación I (media 420) con uno en la Generación IX (media 480) es
+  engañoso sin realizar ajustes estadísticos. Sin normalización, las
+  diferencias naturales en las estadísticas base promedio de cada
+  generación pueden llevar a conclusiones inexactas sobre la verdadera
+  fortaleza de un Pokémon en su contexto generacional.
+\item
+  \textbf{Variables No Consideradas}: La frecuencia y distribución de
+  tipos entre generaciones afectan la utilidad y el desempeño real de
+  los Pokémon. Rankings que no cuantifican y ajustan estos factores
+  pueden ofrecer resultados sesgados, omitiendo cómo la abundancia o
+  escasez de ciertos tipos influye en el metajuego y en las estrategias
+  disponibles (Pokémon Database, 2023).
+\end{itemize}
+
+\section{Aporte de Esta
+Investigación}\label{aporte-de-esta-investigaciuxf3n}
+
+Este estudio busca superar las limitaciones anteriores mediante:
+
+\begin{itemize}
+\item
+  \textbf{Aplicación de Puntuaciones Z (Z-scores)}: Utilizaremos la
+  fórmula estándar de puntuación Z:
+
+  \[z = \frac{X - \mu}{\sigma}\] Donde:
+\item
+  \(X\) es el valor individual.
+\item
+  \(\mu\) es la media.
+\item
+  \(\sigma\) es la desviación estándar.
+\item
+  \textbf{Enfoque en Métricas Objetivas y Replicables}: Al centrarnos
+  exclusivamente en las estadísticas base estandarizadas y evitar
+  factores subjetivos como habilidades, movimientos o popularidad,
+  garantizamos que el ranking resultante sea imparcial y basado en datos
+  cuantitativos sólidos.
+\end{itemize}
+
+\section{Importancia y Contribución del
+Estudio}\label{importancia-y-contribuciuxf3n-del-estudio}
+
+Al ofrecer un ranking objetivo de los mejores Pokémon por generación
+basado en análisis estadísticos estandarizados, este estudio:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Proporciona una Evaluación Imparcial}: Identifica de manera
+  precisa cuáles Pokémon sobresalen dentro de su generación y en
+  comparación con otras, basándose en su desempeño estadístico relativo.
+\item
+  \textbf{Facilita Comparaciones Intergeneracionales}: La normalización
+  estadística elimina los sesgos introducidos por la escalada de poder,
+  permitiendo comparaciones equitativas entre Pokémon de distintas
+  generaciones.
+\item
+  \textbf{Apoya a la Comunidad de Jugadores y Analistas}: Ofrece
+  información valiosa para jugadores que buscan optimizar sus equipos y
+  estrategias, así como para analistas interesados en la evolución del
+  diseño y balance en la franquicia Pokémon.
+\item
+  \textbf{Contribuye al Campo de Estudios de Videojuegos}: Demuestra la
+  aplicación práctica de métodos estadísticos en el análisis de
+  videojuegos, fomentando investigaciones futuras que apliquen enfoques
+  similares en otros contextos.
+\end{itemize}
+
+\section{Referencias}\label{referencias}
+
+\begin{itemize}
+\tightlist
+\item
+  Bulbapedia. (2023). Base Stat Total (BST). Recuperado el 15 de octubre
+  de 2023, de
+  \href{https://bulbapedia.bulbagarden.net/}{https://bulbapedia.bulbagarden.net}
+\item
+  Pokémon Database. (2023). Type distribution by generation. Recuperado
+  el 15 de octubre de 2023, de \url{https://pokemondb.net/type}
+\item
+  Serebii.net. (2023). Base stat averages by generation. Recuperado el
+  15 de octubre de 2023, de
+  \href{https://www.serebii.net/}{https://www.serebii.net}
+\item
+  Smogon University. (2023). Smogon tier lists. Recuperado el 15 de
+  octubre de 2023, de
+  \href{https://www.smogon.com/}{https://www.smogon.com}
+\item
+  The Pokémon Company. (2020). Pokémon of the Year results. Recuperado
+  el 15 de octubre de 2023, de
+  \url{https://www.pokemon.com/es/noticias/pokemon-of-the-year}
+\end{itemize}
+
+\section{Abordamiento}\label{abordamiento}
+
+Este trabajo aborda la necesidad de una evaluación objetiva y justa de
+los Pokémon a través de las diferentes generaciones. Al aplicar métodos
+estadísticos estandarizados y centrarse en métricas cuantitativas
+replicables, proporcionamos un ranking que refleja con mayor precisión
+el desempeño relativo de las especies. Este enfoque no solo beneficia a
+los jugadores y entusiastas de la franquicia, sino que también
+contribuye al ámbito académico al demostrar cómo la estadística
+descriptiva puede aplicarse eficazmente en el análisis de videojuegos.
 
 \end{document}
